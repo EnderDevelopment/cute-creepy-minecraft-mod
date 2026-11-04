@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cutemobs",
+  "version": "${version}",
+  "name": "Cute Mobs",
+  "description": "A mod that makes baby mobs cuter and adds new baby mobs.",
+  "authors": ["EnderDevelopment"],
+  "contact": {
+    "homepage": "https://enderdevelopment.com",
+    "sources": "https://github.com/EnderDevelopment/cute-mobs"
+  },
+  "license": "MIT",
+  "icon": "assets/cutemobs/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.enderdevelopment.cutemobs.CuteMobsMod"
+    ]
+  },
+  "mixins": [
+    "cutemobs.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.20.4",
+    "fabric-api": "*"
+  }
+}

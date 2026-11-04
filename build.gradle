@@ -1,0 +1,29 @@
+plugins {
+    id 'fabric-loom' version '1.4-SNAPSHOT'
+}
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+extra {
+    apply plugin: 'fabric-loom'
+    minecraft {
+        version = project.property('minecraft_version')
+        mappings = project.property('mappings')
+        runs {
+            client {
+                propertyMap.inheritsFrom = project.propertyMap
+            }
+            server {
+                propertyMap.inheritsFrom = project.propertyMap
+            }
+        }
+    }
+}
